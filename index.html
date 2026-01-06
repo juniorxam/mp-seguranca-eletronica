@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP TECH | Segurança e Tecnologia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
+        .service-card {
+            background: linear-gradient(145deg, #0f172a, #1e293b);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.5);
+            transform: translateY(-5px);
+        }
+        .hero-mesh {
+            background-image: radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.3) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, rgba(30, 58, 138, 0.3) 0, transparent 50%);
+        }
+    </style>
+</head>
+<body class="hero-mesh">
+
+    <header class="fixed w-full z-50 px-4 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center bg-slate-900/80 backdrop-blur-xl p-4 rounded-3xl border border-white/10 shadow-2xl">
+            <div class="flex items-center gap-2">
+                <div class="bg-blue-600 p-2 rounded-xl">
+                    <i class="fas fa-shield-halved text-white"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tighter">MP<span class="text-blue-500">TECH</span></span>
+            </div>
+            <a href="https://wa.me/5563992543227" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-xl font-bold text-sm transition shadow-lg shadow-blue-500/30">
+                Orçamento
+            </a>
+        </div>
+    </header>
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-xs font-bold mb-8">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            DISPONÍVEL EM PALMAS E REGIÃO
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+            Proteção de <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Elite</span> para você.
+        </h1>
+        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+            Especialistas em segurança eletrônica de alta performance. De câmeras inteligentes a motores ultra-rápidos.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://wa.me/5563992543227" class="bg-white text-slate-900 px-10 py-4 rounded-2xl font-black text-lg hover:scale-105 transition">
+                FALAR COM TÉCNICO
+            </a>
+            <a href="#servicos" class="bg-slate-800 text-white px-10 py-4 rounded-2xl font-black text-lg border border-slate-700 hover:bg-slate-700 transition">
+                VER SERVIÇOS
+            </a>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="service-card p-8 rounded-[2rem]">
+                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-video text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Câmeras CFTV</h3>
+                <p class="text-slate-400 leading-relaxed">Instalação de câmeras Full HD com acesso remoto via celular de qualquer lugar do mundo.</p>
+            </div>
+
+            <div class="service-card p-8 rounded-[2rem]">
+                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-bolt text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Cercas e Concertinas</h3>
+                <p class="text-slate-400 leading-relaxed">Proteção perimetral máxima para sua residência ou empresa com materiais de alta durabilidade.</p>
+            </div>
+
+            <div class="service-card p-8 rounded-[2rem]">
+                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-gate text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Motor para Portão</h3>
+                <p class="text-slate-400 leading-relaxed">Automação com motores ultra-rápidos e silenciosos. Segurança e praticidade no seu dia a dia.</p>
+            </div>
+
+            <div class="service-card p-8 rounded-[2rem]">
+                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-fingerprint text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Fechaduras Digitais</h3>
+                <p class="text-slate-400 leading-relaxed">Esqueça as chaves. Controle o acesso por biometria, senha ou cartão magnético.</p>
+            </div>
+
+            <div class="service-card p-8 rounded-[2rem]">
+                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-phone-volume text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Interfonia</h3>
+                <p class="text-slate-400 leading-relaxed">Sistemas de comunicação residencial e predial com áudio e vídeo de alta clareza.</p>
+            </div>
+
+            <div class="service-card p-8 rounded-[2rem]">
+                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-network-wired text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Pontos de Rede</h3>
+                <p class="text-slate-400 leading-relaxed">Cabeamento estruturado para internet estável e Wi-Fi de alta cobertura em todo o local.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <a href="https://wa.me/5563992543227" class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(34,197,94,0.5)] hover:scale-110 active:scale-95 transition-all animate-bounce z-50">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <footer class="py-12 text-center border-t border-white/5">
+        <p class="text-slate-500 text-sm">© 2026 MP SERVIÇOS E TECNOLOGIA | (63) 99254-3227</p>
+    </footer>
+
+</body>
+</html>
