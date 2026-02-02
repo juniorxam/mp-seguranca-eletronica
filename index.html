@@ -3,531 +3,1008 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MP SERVIÇOS E TECNOLOGIA - Especialistas em segurança eletrônica em Palmas-TO. Instalação de câmeras CFTV, cercas elétricas, motores para portão e muito mais.">
-    <meta name="keywords" content="segurança eletrônica, câmeras CFTV, cerca elétrica, portão automático, Palmas, tecnologia">
-    <meta name="author" content="MP SERVIÇOS E TECNOLOGIA">
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="MP SERVIÇOS E TECNOLOGIA (@mpservicos_tecnologia) - Especialistas em segurança eletrônica em Palmas-TO. Venda, instalação e manutenção de câmeras, motores para portões, cercas e concertinas.">
+    <meta name="keywords" content="segurança eletrônica, câmeras, motor portão, cerca elétrica, concertina, interfone, Palmas, instalação, manutenção, @mpservicos_tecnologia">
+    <meta name="author" content="MP SERVIÇOS E TECNOLOGIA - @mpservicos_tecnologia">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph com referência ao Instagram -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="MP SERVIÇOS E TECNOLOGIA | Segurança e Tecnologia em Palmas">
-    <meta property="og:description" content="Proteção de elite para sua casa ou empresa. Especialistas em segurança eletrônica em Palmas e região.">
+    <meta property="og:title" content="MP SERVIÇOS E TECNOLOGIA (@mpservicos_tecnologia) | Segurança Eletrônica em Palmas">
+    <meta property="og:description" content="Câmeras • Motor P/ Portões • Cercas • Concertinas • Interfones • Vendas - Instalação - Manutenção">
     <meta property="og:image" content="./og-image.jpg">
-    <title>MP SERVIÇOS E TECNOLOGIA | Segurança Eletrônica em Palmas-TO</title>
+    <meta property="og:url" content="https://mpservicosetecnologia.com.br">
+    
+    <title>MP SERVIÇOS E TECNOLOGIA (@mpservicos_tecnologia) | Segurança Eletrônica - Palmas/TO</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "MP SERVIÇOS E TECNOLOGIA",
+        "alternateName": "@mpservicos_tecnologia",
+        "description": "Especialistas em segurança eletrônica - Venda, instalação e manutenção de câmeras, motores para portões, cercas e concertinas em Palmas-TO",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Palmas",
+            "addressRegion": "TO",
+            "addressCountry": "BR"
+        },
+        "telephone": "+5563992543227",
+        "openingHours": "Mo-Sa 08:00-18:00",
+        "url": "https://mpservicosetecnologia.com.br",
+        "sameAs": "https://instagram.com/mpservicos_tecnologia",
+        "priceRange": "$$",
+        "serviceType": [
+            "Instalação de Câmeras CFTV",
+            "Motor para Portão",
+            "Cerca Elétrica",
+            "Concertina",
+            "Interfone/Interfonia",
+            "Manutenção de Sistemas de Segurança"
+        ]
+    }
+    </script>
+    
     <style>
+        :root {
+            --primary-blue: #3b82f6;
+            --secondary-blue: #2563eb;
+            --accent-blue: #60a5fa;
+            --dark-bg: #0f172a;
+            --darker-bg: #020617;
+            --instagram-pink: #E1306C;
+            --instagram-purple: #833AB4;
+            --mp-blue: #1e40af;
+        }
+        
         * { 
             font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         body { 
-            background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
             color: #f8fafc;
             overflow-x: hidden;
             min-height: 100vh;
+            position: relative;
         }
 
-        /* Hero Section com gradiente mais forte */
-        .hero-section {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.97) 0%, rgba(30, 41, 59, 0.97) 100%),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(59,130,246,0.08)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
-            background-attachment: fixed;
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(30, 64, 175, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Logo MP com efeito */
+        .mp-logo {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .mp-logo::after {
+            content: 'TECNOLOGIA';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #60a5fa, #3b82f6, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+            margin-left: 0.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .mp-logo::after {
+                font-size: 1rem;
+                margin-left: 0.25rem;
+            }
+        }
+
+        /* Instagram Badge MP */
+        .instagram-badge-mp {
+            background: linear-gradient(45deg, #1e40af, #3b82f6, #60a5fa);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+        }
+
+        .instagram-badge-mp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+            border-color: rgba(96, 165, 250, 0.5);
+        }
+
+        /* Hero Section MP */
+        .hero-section-mp {
+            background: 
+                linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(2, 6, 23, 0.98) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="mp-grid" width="100" height="100" patternUnits="userSpaceOnUse"><text x="50" y="55" text-anchor="middle" font-family="Arial" font-size="12" fill="rgba(96,165,250,0.05)">MP</text></pattern></defs><rect width="1200" height="600" fill="url(%23mp-grid)"/></svg>');
             position: relative;
             overflow: hidden;
         }
 
-        .hero-section::before {
-            content: '';
+        .mp-glow {
             position: absolute;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(30, 64, 175, 0.2) 0%, transparent 70%);
             border-radius: 50%;
-            top: -200px;
-            right: -200px;
-            animation: float 20s ease-in-out infinite;
+            filter: blur(40px);
+            animation: mp-float 20s ease-in-out infinite alternate;
         }
 
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            bottom: -100px;
-            left: -100px;
-            animation: float 15s ease-in-out infinite reverse;
+        .mp-glow-1 { top: -300px; right: -200px; }
+        .mp-glow-2 { bottom: -200px; left: -100px; animation-delay: -10s; }
+
+        @keyframes mp-float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-30px, 30px) scale(1.1); }
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(30px); }
-        }
-
-        /* Cards de serviço melhorados */
-        .service-card {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
-            border: 1px solid rgba(59, 130, 246, 0.25);
-            backdrop-filter: blur(10px);
+        /* Cards de serviço MP */
+        .service-card-mp {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+            border: 1px solid rgba(30, 64, 175, 0.3);
+            backdrop-filter: blur(15px);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
+            border-radius: 1.5rem;
         }
 
-        .service-card::before {
+        .service-card-mp::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, transparent 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
+            background: linear-gradient(135deg, transparent 40%, rgba(30, 64, 175, 0.1) 50%, transparent 60%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
         }
 
-        .service-card:hover {
+        .service-card-mp:hover::before {
+            transform: translateX(100%);
+        }
+
+        .service-card-mp:hover {
             border-color: #3b82f6;
-            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.5);
-            transform: translateY(-8px) scale(1.02);
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+            box-shadow: 
+                0 15px 35px -10px rgba(30, 64, 175, 0.3),
+                0 0 40px rgba(96, 165, 250, 0.2);
+            transform: translateY(-8px);
         }
 
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.05) 100%);
-            border-radius: 0.75rem;
-            margin-bottom: 1.5rem;
-            transition: transform 0.4s ease;
-            padding: 0.5rem;
-        }
-
-        .service-card:hover .service-image {
-            transform: scale(1.05);
-        }
-
-        /* Ícones melhorados */
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(99, 102, 241, 0.15) 100%);
-            border: 1px solid rgba(59, 130, 246, 0.4);
+        /* Ícones MP */
+        .mp-icon-box {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.2) 0%, rgba(59, 130, 246, 0.15) 100%);
+            border: 2px solid rgba(96, 165, 250, 0.3);
             border-radius: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
+            margin: 0 auto 1.5rem;
             transition: all 0.3s ease;
         }
 
-        .service-card:hover .icon-box {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.4) 0%, rgba(99, 102, 241, 0.25) 100%);
-            border-color: #3b82f6;
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
-            transform: rotate(5deg);
+        .service-card-mp:hover .mp-icon-box {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.3) 0%, rgba(59, 130, 246, 0.25) 100%);
+            border-color: #60a5fa;
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0 10px 25px rgba(96, 165, 250, 0.3);
         }
 
-        /* Texto gradiente */
-        .gradient-text {
-            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
+        /* Texto gradiente MP */
+        .mp-gradient-text {
+            background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 30%, #1e40af 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-weight: 900;
+            background-size: 200% 200%;
+            animation: mp-gradient-shift 8s ease infinite;
         }
 
-        /* Botões melhorados */
-        .btn-primary {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            transition: all 0.3s ease;
+        @keyframes mp-gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Botão MP */
+        .btn-mp {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            border: none;
             position: relative;
             overflow: hidden;
-            border: none;
             font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
         }
 
-        .btn-primary::before {
+        .btn-mp::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
-            transition: left 0.6s ease;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.2), 
+                transparent);
+            transition: left 0.7s ease;
         }
 
-        .btn-primary:hover::before {
+        .btn-mp:hover::before {
             left: 100%;
         }
 
-        .btn-primary:hover {
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+        .btn-mp:hover {
             transform: translateY(-3px);
+            box-shadow: 
+                0 10px 30px rgba(30, 64, 175, 0.5),
+                0 0 40px rgba(59, 130, 246, 0.3);
         }
 
-        .btn-secondary {
-            border: 2px solid rgba(59, 130, 246, 0.6);
-            background: rgba(59, 130, 246, 0.08);
-            transition: all 0.3s ease;
-            font-weight: 700;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(59, 130, 246, 0.2);
-            border-color: #3b82f6;
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-            transform: translateY(-3px);
-        }
-
-        /* Header melhorado */
-        .header-blur {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Botão WhatsApp melhorado */
-        .whatsapp-btn {
-            background: linear-gradient(135deg, #25d366 0%, #20ba58 100%);
-            box-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
-            transition: all 0.3s ease;
+        /* Botão Instagram MP */
+        .btn-instagram-mp {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            color: white;
             border: none;
+            transition: all 0.3s ease;
+            background-size: 200% 200%;
+            animation: mp-instagram-flow 4s ease infinite;
         }
 
-        .whatsapp-btn:hover {
-            box-shadow: 0 0 60px rgba(37, 211, 102, 0.8);
-            transform: scale(1.15) rotate(5deg);
+        @keyframes mp-instagram-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
-        /* Seção de título */
-        .section-title {
-            font-size: 2.75rem;
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+        .btn-instagram-mp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.4);
+        }
+
+        /* Seção Instagram MP */
+        .instagram-section-mp {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+            border: 2px solid rgba(30, 64, 175, 0.3);
+            border-radius: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instagram-section-mp::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1e40af, #3b82f6, #60a5fa);
+        }
+
+        /* Stats MP */
+        .mp-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .mp-stat-item {
+            text-align: center;
+        }
+
+        .mp-stat-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        @media (max-width: 768px) {
-            .section-title {
-                font-size: 2.25rem;
-            }
-        }
-
-        /* Badge de disponibilidade */
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%);
-            border: 1px solid rgba(59, 130, 246, 0.4);
-            color: #93c5fd;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
+        .mp-stat-label {
             font-size: 0.875rem;
-            font-weight: 700;
-            margin-bottom: 2.5rem;
-            letter-spacing: 0.5px;
+            color: #94a3b8;
+            margin-top: 0.25rem;
         }
 
-        .pulse-dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background: #60a5fa;
-            border-radius: 50%;
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-            box-shadow: 0 0 10px #60a5fa;
-        }
-
-        @keyframes pulse {
-            0%, 100% { 
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% { 
-                opacity: 0.7;
-                transform: scale(1.2);
-            }
-        }
-
-        /* Links do footer */
-        .footer-link {
+        /* Tags de serviço MP */
+        .mp-service-tag {
+            background: rgba(30, 64, 175, 0.15);
+            color: #93c5fd;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid rgba(96, 165, 250, 0.2);
             transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
         }
 
-        .footer-link:hover {
-            color: #60a5fa !important;
-            transform: translateX(5px);
-            text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+        .mp-service-tag:hover {
+            background: rgba(30, 64, 175, 0.25);
+            border-color: #60a5fa;
+            transform: translateY(-1px);
         }
 
-        /* CTA Section melhorada */
-        .cta-section {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            backdrop-filter: blur(10px);
+        /* WhatsApp Button MP */
+        .whatsapp-btn-mp {
+            background: linear-gradient(135deg, #25d366 0%, #128C7E 100%);
+            box-shadow: 
+                0 0 30px rgba(37, 211, 102, 0.6),
+                0 0 60px rgba(37, 211, 102, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: mp-pulse 2s infinite;
         }
 
-        /* Efeito de brilho sutil nos textos importantes */
-        .text-glow {
-            text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        @keyframes mp-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Melhoria na legibilidade do texto */
-        .text-readable {
-            color: #e2e8f0;
-            line-height: 1.7;
+        .whatsapp-btn-mp:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 
+                0 0 50px rgba(37, 211, 102, 0.8),
+                0 0 80px rgba(37, 211, 102, 0.4);
         }
 
-        /* Espaçamento entre seções */
-        section {
-            scroll-margin-top: 80px;
+        /* Footer MP */
+        .footer-mp {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(2, 6, 23, 0.98) 100%);
+            border-top: 2px solid rgba(30, 64, 175, 0.2);
+            position: relative;
+        }
+
+        .footer-mp::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .mp-glow {
+                width: 400px;
+                height: 400px;
+            }
+            
+            .mp-stats {
+                gap: 1rem;
+            }
+            
+            .mp-stat-number {
+                font-size: 1.25rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="fixed w-full z-50 px-4 py-3 md:py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center header-blur p-4 rounded-2xl md:rounded-3xl">
-            <div class="flex items-center gap-2 md:gap-3">
-                <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-2 md:p-3 rounded-lg md:rounded-xl shadow-lg shadow-blue-500/40">
-                    <i class="fas fa-shield-halved text-white text-lg md:text-xl"></i>
+    <!-- Header MP -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-slate-900/95 backdrop-blur-lg border-b border-blue-900/30">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center py-3 md:py-4">
+                <div class="flex items-center gap-2 md:gap-3">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 p-2 md:p-3 rounded-lg md:rounded-xl shadow-lg shadow-blue-600/40">
+                        <i class="fas fa-shield-halved text-white text-lg md:text-xl"></i>
+                    </div>
+                    <div class="mp-logo">
+                        <span class="text-xl md:text-3xl font-extrabold tracking-tighter text-white">
+                            MP SERVIÇOS E
+                        </span>
+                    </div>
                 </div>
-                <span class="text-lg md:text-2xl font-extrabold tracking-tighter text-white">
-                    MP <span class="gradient-text">SERVIÇOS E TECNOLOGIA</span>
-                </span>
+                
+                <div class="flex items-center gap-3 md:gap-4">
+                    <!-- Instagram Badge -->
+                    <a href="https://instagram.com/mpservicos_tecnologia" target="_blank" 
+                       class="instagram-badge-mp hidden md:inline-flex">
+                        <i class="fab fa-instagram"></i> @mpservicos_tecnologia
+                    </a>
+                    
+                    <a href="https://wa.me/5563992543227" 
+                       class="btn-mp text-white px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl font-bold text-xs md:text-sm shadow-lg">
+                        <i class="fab fa-whatsapp mr-1"></i> ORÇAMENTO GRÁTIS
+                    </a>
+                </div>
             </div>
-            <a href="https://wa.me/5563992543227" 
-               class="btn-primary text-white px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl font-bold text-xs md:text-sm shadow-lg"
-               aria-label="Solicitar orçamento pelo WhatsApp">
-                ORÇAMENTO GRÁTIS
-            </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 md:pt-20 relative z-10" id="inicio">
-        <div class="badge">
-            <span class="pulse-dot"></span>
-            DISPONÍVEL EM PALMAS E REGIÃO
+    <!-- Hero Section MP -->
+    <section id="inicio" class="hero-section-mp min-h-screen flex flex-col justify-center items-center text-center px-4 pt-32 md:pt-28 relative overflow-hidden">
+        <div class="mp-glow mp-glow-1"></div>
+        <div class="mp-glow mp-glow-2"></div>
+        
+        <div class="max-w-5xl relative z-10">
+            <!-- Instagram Badge -->
+            <a href="https://instagram.com/mpservicos_tecnologia" target="_blank" class="instagram-badge-mp mb-6">
+                <i class="fab fa-instagram"></i> @mpservicos_tecnologia • 20 posts • 231 seguidores
+            </a>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 md:mb-8 leading-tight">
+                <span class="mp-gradient-text">Segurança Inteligente</span><br>
+                Para Sua Paz em Palmas
+            </h1>
+            
+            <p class="text-slate-300 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-8 md:mb-10 leading-relaxed">
+                <span class="font-bold text-blue-300">Especialistas em segurança eletrônica</span> com mais de 10 anos protegendo 
+                famílias e empresas em Palmas e região.
+            </p>
+            
+            <!-- Serviços principais -->
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-10 md:mb-12">
+                <span class="mp-service-tag">
+                    <i class="fas fa-video mr-2"></i>Câmeras CFTV
+                </span>
+                <span class="mp-service-tag">
+                    <i class="fas fa-gate mr-2"></i>Motor P/ Portões
+                </span>
+                <span class="mp-service-tag">
+                    <i class="fas fa-bolt mr-2"></i>Cercas Elétricas
+                </span>
+                <span class="mp-service-tag">
+                    <i class="fas fa-shield-alt mr-2"></i>Concertinas
+                </span>
+                <span class="mp-service-tag">
+                    <i class="fas fa-phone-alt mr-2"></i>Interfones
+                </span>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
+                <a href="https://wa.me/5563992543227" 
+                   class="btn-mp text-white px-8 md:px-12 py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg shadow-xl">
+                    <i class="fab fa-whatsapp mr-2"></i> FALAR COM ESPECIALISTA
+                </a>
+                
+                <a href="https://instagram.com/mpservicos_tecnologia" target="_blank"
+                   class="btn-instagram-mp text-white px-8 md:px-12 py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg">
+                    <i class="fab fa-instagram mr-2"></i> SEGUIR NO INSTAGRAM
+                </a>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-16 md:mt-20">
+                <div class="text-center p-4 bg-blue-900/20 rounded-2xl border border-blue-800/30">
+                    <div class="mp-stat-number mb-1">500+</div>
+                    <div class="text-slate-400 text-sm">Instalações</div>
+                </div>
+                <div class="text-center p-4 bg-blue-900/20 rounded-2xl border border-blue-800/30">
+                    <div class="mp-stat-number mb-1">24h</div>
+                    <div class="text-slate-400 text-sm">Suporte</div>
+                </div>
+                <div class="text-center p-4 bg-blue-900/20 rounded-2xl border border-blue-800/30">
+                    <div class="mp-stat-number mb-1">10+</div>
+                    <div class="text-slate-400 text-sm">Anos Exp.</div>
+                </div>
+                <div class="text-center p-4 bg-blue-900/20 rounded-2xl border border-blue-800/30">
+                    <div class="mp-stat-number mb-1">100%</div>
+                    <div class="text-slate-400 text-sm">Garantia</div>
+                </div>
+            </div>
         </div>
         
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 md:mb-8 leading-tight text-glow">
-            Proteção de <br><span class="gradient-text">Elite</span> para você.
-        </h1>
-        
-        <p class="text-readable text-lg md:text-xl lg:text-2xl max-w-3xl mb-8 md:mb-12 leading-relaxed">
-            Especialistas em segurança eletrônica de alta performance. De câmeras inteligentes a motores ultra-rápidos. 
-            <span class="font-semibold text-blue-300">Tecnologia que protege o que você ama.</span>
-        </p>
-        
-        <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
-            <a href="https://wa.me/5563992543227" 
-               class="btn-primary text-white px-8 md:px-10 py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-sm md:text-base shadow-lg"
-               aria-label="Falar com técnico especializado">
-                <i class="fab fa-whatsapp mr-2"></i> FALAR COM TÉCNICO
-            </a>
-            <a href="#servicos" 
-               class="btn-secondary text-blue-300 px-8 md:px-10 py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-sm md:text-base"
-               aria-label="Ver nossos serviços">
-                <i class="fas fa-list mr-2"></i> VER SERVIÇOS
-            </a>
-        </div>
-
-        <!-- Seta indicando scroll -->
-        <div class="mt-16 animate-bounce">
-            <a href="#servicos" class="text-blue-400 hover:text-blue-300 transition-colors" aria-label="Role para baixo">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
-        </div>
+        <!-- Seta animada -->
+        <a href="#servicos" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-blue-400 hover:text-blue-300 transition-colors z-10">
+            <i class="fas fa-chevron-down text-3xl"></i>
+        </a>
     </section>
 
-    <!-- Services Section -->
-    <section id="servicos" class="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto relative z-10">
-        <div class="text-center mb-12 md:mb-16">
-            <h2 class="section-title">Nossos Serviços</h2>
-            <p class="text-readable text-lg md:text-xl max-w-3xl mx-auto">
-                Soluções completas em segurança e tecnologia para sua residência ou empresa em Palmas e região
+    <!-- Serviços MP -->
+    <section id="servicos" class="py-20 md:py-28 px-4 md:px-6 max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-16 md:mb-20">
+            <h2 class="text-4xl md:text-5xl font-black mb-4">
+                Nossos <span class="mp-gradient-text">Serviços Especializados</span>
+            </h2>
+            <p class="text-slate-400 text-lg md:text-xl max-w-3xl mx-auto">
+                Oferecemos soluções completas em segurança eletrônica para residências e empresas
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             
             <!-- Câmeras CFTV -->
-            <div class="service-card p-6 md:p-8 rounded-2xl">
-                <img src="./cftv.jpg" alt="Instalação de câmeras CFTV Full HD em Palmas" class="service-image">
-                <div class="icon-box">
-                    <i class="fas fa-video text-2xl text-blue-400"></i>
+            <div class="service-card-mp p-6 md:p-8">
+                <div class="mp-icon-box">
+                    <i class="fas fa-video text-3xl text-blue-400"></i>
                 </div>
                 <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Câmeras CFTV</h3>
-                <p class="text-readable text-sm md:text-base flex-grow">
-                    Instalação de câmeras Full HD com acesso remoto via celular de qualquer lugar do mundo. 
-                    Monitoramento 24/7 com qualidade profissional e armazenamento em nuvem.
+                <p class="text-slate-400 mb-6">
+                    Sistemas completos de vigilância com câmeras Full HD/4K, visão noturna, 
+                    gravação digital e acesso remoto via smartphone.
                 </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="mp-service-tag text-xs">Instalação</span>
+                    <span class="mp-service-tag text-xs">Manutenção</span>
+                    <span class="mp-service-tag text-xs">Venda</span>
+                    <span class="mp-service-tag text-xs">Monitoramento</span>
+                </div>
+                <a href="https://wa.me/5563992543227?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20CFTV"
+                   class="btn-mp text-white px-6 py-3 rounded-xl font-bold text-sm inline-block text-center w-full">
+                    <i class="fas fa-bolt mr-2"></i> SOLICITAR ORÇAMENTO
+                </a>
             </div>
 
-            <!-- Cercas e Concertinas -->
-            <div class="service-card p-6 md:p-8 rounded-2xl">
-                <img src="./cerca.jpg" alt="Instalação de cerca elétrica e concertina em Palmas" class="service-image">
-                <div class="icon-box">
-                    <i class="fas fa-bolt text-2xl text-blue-400"></i>
+            <!-- Motor para Portões -->
+            <div class="service-card-mp p-6 md:p-8">
+                <div class="mp-icon-box">
+                    <i class="fas fa-gate text-3xl text-blue-400"></i>
                 </div>
-                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Cercas e Concertinas</h3>
-                <p class="text-readable text-sm md:text-base flex-grow">
-                    Proteção perimetral máxima para sua residência ou empresa com materiais de alta durabilidade 
-                    e resistência. Instalação profissional com garantia.
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Motor para Portões</h3>
+                <p class="text-slate-400 mb-6">
+                    Automatização de portões com motores silenciosos, controles remotos, 
+                    sensores de segurança e instalação profissional.
                 </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="mp-service-tag text-xs">Automático</span>
+                    <span class="mp-service-tag text-xs">Controle Remoto</span>
+                    <span class="mp-service-tag text-xs">Manutenção</span>
+                    <span class="mp-service-tag text-xs">Instalação</span>
+                </div>
+                <a href="https://wa.me/5563992543227?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20motor%20para%20portão"
+                   class="btn-mp text-white px-6 py-3 rounded-xl font-bold text-sm inline-block text-center w-full">
+                    <i class="fas fa-bolt mr-2"></i> SOLICITAR ORÇAMENTO
+                </a>
             </div>
 
-            <!-- Motor para Portão -->
-            <div class="service-card p-6 md:p-8 rounded-2xl">
-                <img src="./motor.jpg" alt="Instalação de motor para portão automático em Palmas" class="service-image">
-                <div class="icon-box">
-                    <i class="fas fa-gate text-2xl text-blue-400"></i>
+            <!-- Cercas Elétricas -->
+            <div class="service-card-mp p-6 md:p-8">
+                <div class="mp-icon-box">
+                    <i class="fas fa-bolt text-3xl text-blue-400"></i>
                 </div>
-                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Motor para Portão</h3>
-                <p class="text-readable text-sm md:text-base flex-grow">
-                    Automação com motores ultra-rápidos e silenciosos. Segurança e praticidade no seu dia a dia 
-                    com controle remoto e sensores de segurança.
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Cercas Elétricas</h3>
+                <p class="text-slate-400 mb-6">
+                    Proteção perimetral com choque regulável, fios de alta resistência, 
+                    sensores de intrusão e sistema anti-corte.
                 </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="mp-service-tag text-xs">Proteção Perimetral</span>
+                    <span class="mp-service-tag text-xs">Alta Tensão</span>
+                    <span class="mp-service-tag text-xs">Instalação</span>
+                    <span class="mp-service-tag text-xs">Manutenção</span>
+                </div>
+                <a href="https://wa.me/5563992543227?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20cerca%20elétrica"
+                   class="btn-mp text-white px-6 py-3 rounded-xl font-bold text-sm inline-block text-center w-full">
+                    <i class="fas fa-bolt mr-2"></i> SOLICITAR ORÇAMENTO
+                </a>
             </div>
 
-            <!-- Fechaduras Digitais -->
-            <div class="service-card p-6 md:p-8 rounded-2xl">
-                <img src="./fechadura.jpg" alt="Instalação de fechaduras digitais biométricas em Palmas" class="service-image">
-                <div class="icon-box">
-                    <i class="fas fa-fingerprint text-2xl text-blue-400"></i>
+            <!-- Concertinas -->
+            <div class="service-card-mp p-6 md:p-8">
+                <div class="mp-icon-box">
+                    <i class="fas fa-shield-alt text-3xl text-blue-400"></i>
                 </div>
-                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Fechaduras Digitais</h3>
-                <p class="text-readable text-sm md:text-base flex-grow">
-                    Esqueça as chaves. Controle o acesso por biometria, senha ou cartão magnético com tecnologia 
-                    de ponta. Instalação rápida e segura.
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Concertinas</h3>
+                <p class="text-slate-400 mb-6">
+                    Barreiras físicas de alta segurança para muros e telhados, 
+                    instaladas com materiais de máxima durabilidade e resistência.
                 </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="mp-service-tag text-xs">Barreira Física</span>
+                    <span class="mp-service-tag text-xs">Alta Segurança</span>
+                    <span class="mp-service-tag text-xs">Instalação</span>
+                    <span class="mp-service-tag text-xs">Durabilidade</span>
+                </div>
+                <a href="https://wa.me/5563992543227?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20concertina"
+                   class="btn-mp text-white px-6 py-3 rounded-xl font-bold text-sm inline-block text-center w-full">
+                    <i class="fas fa-bolt mr-2"></i> SOLICITAR ORÇAMENTO
+                </a>
             </div>
 
-            <!-- Interfonia -->
-            <div class="service-card p-6 md:p-8 rounded-2xl">
-                <img src="./interfonia.jpg" alt="Sistema de interfonia com vídeo em Palmas" class="service-image">
-                <div class="icon-box">
-                    <i class="fas fa-phone-volume text-2xl text-blue-400"></i>
+            <!-- Interfones -->
+            <div class="service-card-mp p-6 md:p-8">
+                <div class="mp-icon-box">
+                    <i class="fas fa-phone-alt text-3xl text-blue-400"></i>
                 </div>
-                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Interfonia</h3>
-                <p class="text-readable text-sm md:text-base flex-grow">
-                    Sistemas de comunicação residencial e predial com áudio e vídeo de alta clareza e confiabilidade. 
-                    Ideal para condomínios e empresas.
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Interfones</h3>
+                <p class="text-slate-400 mb-6">
+                    Sistemas de comunicação com vídeo e áudio para residências e condomínios, 
+                    com tecnologia digital e instalação limpa.
                 </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="mp-service-tag text-xs">Comunicação</span>
+                    <span class="mp-service-tag text-xs">Áudio/Video</span>
+                    <span class="mp-service-tag text-xs">Instalação</span>
+                    <span class="mp-service-tag text-xs">Manutenção</span>
+                </div>
+                <a href="https://wa.me/5563992543227?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20interfone"
+                   class="btn-mp text-white px-6 py-3 rounded-xl font-bold text-sm inline-block text-center w-full">
+                    <i class="fas fa-bolt mr-2"></i> SOLICITAR ORÇAMENTO
+                </a>
             </div>
 
-            <!-- Pontos de Rede -->
-            <div class="service-card p-6 md:p-8 rounded-2xl">
-                <img src="./rede.jpg" alt="Cabeamento estruturado e pontos de rede em Palmas" class="service-image">
-                <div class="icon-box">
-                    <i class="fas fa-network-wired text-2xl text-blue-400"></i>
+            <!-- Vendas & Manutenção -->
+            <div class="service-card-mp p-6 md:p-8 bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-2 border-blue-500/40">
+                <div class="mp-icon-box bg-blue-900/40 border-blue-500/50">
+                    <i class="fas fa-tools text-3xl text-blue-400"></i>
                 </div>
-                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Pontos de Rede</h3>
-                <p class="text-readable text-sm md:text-base flex-grow">
-                    Cabeamento estruturado para internet estável e Wi-Fi de alta cobertura em todo o local. 
-                    Soluções para home office e empresas.
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Vendas & Manutenção</h3>
+                <p class="text-slate-300 mb-6">
+                    Além da instalação, fornecemos equipamentos de qualidade e 
+                    oferecemos manutenção preventiva e corretiva para todos os sistemas.
                 </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="mp-service-tag bg-blue-900/40 text-blue-300 text-xs">Venda de Equipamentos</span>
+                    <span class="mp-service-tag bg-blue-900/40 text-blue-300 text-xs">Manutenção Preventiva</span>
+                    <span class="mp-service-tag bg-blue-900/40 text-blue-300 text-xs">Assistência Técnica</span>
+                    <span class="mp-service-tag bg-blue-900/40 text-blue-300 text-xs">Garantia</span>
+                </div>
+                <a href="https://wa.me/5563992543227?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20vendas%20ou%20manutenção"
+                   class="btn-mp text-white px-6 py-3 rounded-xl font-bold text-sm inline-block text-center w-full">
+                    <i class="fas fa-bolt mr-2"></i> FALAR COM VENDAS
+                </a>
             </div>
 
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto relative z-10">
-        <div class="cta-section rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-            <!-- Elementos decorativos -->
-            <div class="absolute top-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-            <div class="absolute bottom-0 right-0 w-40 h-40 bg-indigo-500/10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+    <!-- Seção Instagram MP -->
+    <section class="py-16 md:py-24 px-4 md:px-6 max-w-5xl mx-auto">
+        <div class="instagram-section-mp p-6 md:p-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">
+                        Siga <span class="mp-gradient-text">@mpservicos_tecnologia</span>
+                    </h3>
+                    <p class="text-slate-300 mb-4">
+                        Veja nossos trabalhos recentes, dicas de segurança e promoções especiais no Instagram!
+                    </p>
+                    
+                    <div class="mp-stats">
+                        <div class="mp-stat-item">
+                            <div class="mp-stat-number">20</div>
+                            <div class="mp-stat-label">Posts</div>
+                        </div>
+                        <div class="mp-stat-item">
+                            <div class="mp-stat-number">231</div>
+                            <div class="mp-stat-label">Seguidores</div>
+                        </div>
+                        <div class="mp-stat-item">
+                            <div class="mp-stat-number">210</div>
+                            <div class="mp-stat-label">Seguindo</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <a href="https://instagram.com/mpservicos_tecnologia" target="_blank" 
+                       class="btn-instagram-mp text-white px-8 py-3 rounded-xl font-bold text-lg inline-flex items-center gap-2 mb-3">
+                        <i class="fab fa-instagram"></i> @mpservicos_tecnologia
+                    </a>
+                    <p class="text-slate-400 text-sm">
+                        <i class="fas fa-map-marker-alt mr-1"></i> Segurança Eletrônica • Palmas-TO
+                    </p>
+                </div>
+            </div>
             
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white relative z-10">
-                Pronto para proteger o que você ama?
+            <!-- Placeholder para feed do Instagram -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                <div class="bg-blue-900/20 rounded-xl aspect-square flex items-center justify-center border border-blue-800/30">
+                    <i class="fab fa-instagram text-3xl text-blue-500/50"></i>
+                </div>
+                <div class="bg-blue-900/20 rounded-xl aspect-square flex items-center justify-center border border-blue-800/30">
+                    <i class="fas fa-camera text-3xl text-blue-500/50"></i>
+                </div>
+                <div class="bg-blue-900/20 rounded-xl aspect-square flex items-center justify-center border border-blue-800/30">
+                    <i class="fas fa-video text-3xl text-blue-500/50"></i>
+                </div>
+                <div class="bg-blue-900/20 rounded-xl aspect-square flex items-center justify-center border border-blue-800/30">
+                    <i class="fas fa-shield-alt text-3xl text-blue-500/50"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="contato" class="py-16 md:py-24 px-4 md:px-6 max-w-4xl mx-auto">
+        <div class="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border-2 border-blue-500/30 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/10 to-transparent"></div>
+            
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white relative z-10">
+                Pronto para proteger o que é seu?
             </h2>
-            <p class="text-readable text-lg md:text-xl mb-8 max-w-2xl mx-auto relative z-10">
-                Entre em contato agora e receba um <span class="font-bold text-blue-300">orçamento personalizado gratuito</span> 
-                para sua necessidade. Atendemos em Palmas e toda região.
-            </p>
-            <a href="https://wa.me/5563992543227" 
-               class="btn-primary text-white px-8 md:px-12 py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg shadow-lg inline-block relative z-10"
-               aria-label="Solicitar orçamento gratuito pelo WhatsApp">
-                <i class="fab fa-whatsapp mr-2"></i> SOLICITAR ORÇAMENTO GRÁTIS
-            </a>
             
-            <!-- Info adicional -->
-            <p class="mt-6 text-blue-300 text-sm md:text-base relative z-10">
-                <i class="fas fa-clock mr-1"></i> Atendimento: Segunda a Sábado, 8h às 18h
+            <p class="text-slate-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto relative z-10">
+                Entre em contato agora para um <span class="font-bold text-blue-300">orçamento gratuito</span> 
+                ou siga nosso Instagram para acompanhar nossos trabalhos!
             </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+                <a href="https://wa.me/5563992543227" 
+                   class="btn-mp text-white px-8 md:px-12 py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg shadow-xl">
+                    <i class="fab fa-whatsapp mr-2"></i> CHAMAR NO WHATSAPP
+                </a>
+                
+                <a href="https://instagram.com/mpservicos_tecnologia" target="_blank"
+                   class="btn-instagram-mp text-white px-8 md:px-12 py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg">
+                    <i class="fab fa-instagram mr-2"></i> SEGUIR NO INSTAGRAM
+                </a>
+            </div>
+            
+            <div class="mt-8 text-blue-300 text-sm md:text-base relative z-10">
+                <i class="fas fa-map-marker-alt mr-2"></i> Atendemos em 
+                <span class="font-bold">Palmas e toda região do Tocantins</span>
+            </div>
         </div>
     </section>
 
-    <!-- WhatsApp Button -->
+    <!-- WhatsApp Button MP -->
     <a href="https://wa.me/5563992543227" 
-       class="whatsapp-btn fixed bottom-6 md:bottom-8 right-6 md:right-8 text-white w-14 md:w-16 h-14 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50"
+       class="whatsapp-btn-mp fixed bottom-6 md:bottom-8 right-6 md:right-8 text-white w-16 md:w-18 h-16 md:h-18 rounded-full flex items-center justify-center z-50"
        aria-label="Chamar no WhatsApp">
-        <i class="fab fa-whatsapp text-2xl md:text-3xl"></i>
+        <i class="fab fa-whatsapp text-3xl md:text-4xl"></i>
     </a>
 
-    <!-- Footer -->
-    <footer class="py-8 md:py-12 text-center border-t border-white/10 px-4 relative z-10 bg-slate-900/50">
+    <!-- Footer MP -->
+    <footer class="footer-mp py-12 md:py-16 px-4 md:px-6">
         <div class="max-w-7xl mx-auto">
-            <!-- Logo no footer -->
-            <div class="mb-6">
-                <div class="flex items-center justify-center gap-2 md:gap-3">
-                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-2 md:p-3 rounded-lg md:rounded-xl">
-                        <i class="fas fa-shield-halved text-white text-lg md:text-xl"></i>
+            <div class="text-center mb-10">
+                <div class="flex items-center justify-center gap-3 mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 p-3 rounded-xl">
+                        <i class="fas fa-shield-halved text-white text-2xl"></i>
                     </div>
-                    <span class="text-xl md:text-3xl font-extrabold tracking-tighter text-white">
-                        MP <span class="gradient-text">SERVIÇOS E TECNOLOGIA</span>
-                    </span>
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">
+                            MP <span class="mp-gradient-text">SERVIÇOS E TECNOLOGIA</span>
+                        </h2>
+                        <p class="text-blue-300 text-sm md:text-base font-medium">
+                            <i class="fab fa-instagram mr-1"></i> @mpservicos_tecnologia
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Contatos -->
-            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-6">
-                <a href="https://wa.me/5563992543227" 
-                   class="footer-link text-slate-300 hover:text-blue-400 text-base md:text-lg font-medium">
-                    <i class="fab fa-whatsapp mr-2"></i>(63) 99254-3227
-                </a>
-                <span class="text-slate-600 hidden md:inline">•</span>
-                <span class="text-slate-300 text-base md:text-lg">
-                    <i class="fas fa-map-marker-alt mr-2"></i>Palmas - TO e Região
-                </span>
+            <!-- Grid de informações -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-10">
+                <!-- Contato -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-bold mb-4 text-white flex items-center gap-2">
+                        <i class="fas fa-phone text-blue-400"></i> Contato
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="https://wa.me/5563992543227" 
+                           class="text-slate-300 hover:text-green-400 text-base block transition-colors">
+                            <i class="fab fa-whatsapp mr-2"></i> (63) 99254-3227
+                        </a>
+                        <a href="tel:+5563992543227" 
+                           class="text-slate-300 hover:text-blue-400 text-base block transition-colors">
+                            <i class="fas fa-phone mr-2"></i> (63) 99254-3227
+                        </a>
+                        <div class="text-slate-400 text-base">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Palmas - TO
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviços -->
+                <div class="text-center">
+                    <h3 class="text-lg font-bold mb-4 text-white flex items-center justify-center gap-2">
+                        <i class="fas fa-bolt text-blue-400"></i> Serviços
+                    </h3>
+                    <div class="grid grid-cols-2 gap-2">
+                        <span class="bg-blue-900/30 text-blue-300 px-3 py-2 rounded-lg text-sm text-center">
+                            Câmeras CFTV
+                        </span>
+                        <span class="bg-blue-900/30 text-blue-300 px-3 py-2 rounded-lg text-sm text-center">
+                            Motor Portão
+                        </span>
+                        <span class="bg-blue-900/30 text-blue-300 px-3 py-2 rounded-lg text-sm text-center">
+                            Cerca Elétrica
+                        </span>
+                        <span class="bg-blue-900/30 text-blue-300 px-3 py-2 rounded-lg text-sm text-center">
+                            Concertina
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Instagram -->
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-bold mb-4 text-white flex items-center justify-end gap-2">
+                        <i class="fab fa-instagram text-blue-400"></i> Instagram
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="https://instagram.com/mpservicos_tecnologia" target="_blank" 
+                           class="text-slate-300 hover:text-blue-400 text-base inline-flex items-center gap-2">
+                            <i class="fab fa-instagram"></i> @mpservicos_tecnologia
+                        </a>
+                        <div class="text-slate-400 text-sm mt-2">
+                            20 posts • 231 seguidores • 210 seguindo
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Direitos autorais -->
-            <p class="text-slate-400 text-sm md:text-base mb-4">
-                Especialistas em Segurança Eletrônica e Automação Residencial
-            </p>
-            <p class="text-slate-500 text-xs md:text-sm">
-                © 2026 MP SERVIÇOS E TECNOLOGIA | Todos os direitos reservados
-            </p>
-            
-            <!-- Segurança adicional -->
-            <p class="mt-4 text-slate-600 text-xs">
-                <i class="fas fa-lock mr-1"></i> Sua segurança é nossa prioridade
-            </p>
+            <!-- Copyright -->
+            <div class="border-t border-blue-900/30 pt-8 text-center">
+                <div class="flex justify-center gap-4 mb-6">
+                    <a href="https://wa.me/5563992543227" 
+                       class="text-slate-400 hover:text-green-400 text-xl transition-colors">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://instagram.com/mpservicos_tecnologia" target="_blank"
+                       class="text-slate-400 hover:text-blue-400 text-xl transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="tel:+5563992543227" 
+                       class="text-slate-400 hover:text-blue-400 text-xl transition-colors">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                
+                <p class="text-slate-500 text-sm mb-2">
+                    © 2026 MP SERVIÇOS E TECNOLOGIA (@mpservicos_tecnologia)
+                </p>
+                <p class="text-slate-600 text-xs">
+                    Especialistas em Segurança Eletrônica em Palmas e Região • WhatsApp: (63) 99254-3227
+                </p>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-slate-900/98', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-slate-900/98', 'shadow-lg');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // WhatsApp default message
+        document.querySelectorAll('a[href*="whatsapp"]').forEach(link => {
+            if (!link.href.includes('text=')) {
+                link.href = 'https://wa.me/5563992543227?text=Olá!%20Vim%20pelo%20site%20da%20MP%20SERVIÇOS%20E%20TECNOLOGIA%20e%20gostaria%20de%20um%20orçamento%20para%20serviços%20de%20segurança%20eletrônica.';
+            }
+        });
+
+        // Instagram stats animation
+        function animateMPStats() {
+            const stats = [
+                { element: document.querySelectorAll('.mp-stat-number')[0], final: 20 },
+                { element: document.querySelectorAll('.mp-stat-number')[1], final: 231 },
+                { element: document.querySelectorAll('.mp-stat-number')[2], final: 210 }
+            ];
+            
+            stats.forEach(stat => {
+                if (stat.element) {
+                    let current = 0;
+                    const increment = stat.final / 20;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= stat.final) {
+                            stat.element.textContent = stat.final;
+                            clearInterval(timer);
+                        } else {
+                            stat.element.textContent = Math.floor(current);
+                        }
+                    }, 50);
+                }
+            });
+        }
+
+        // Trigger stats animation when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateMPStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const instagramSection = document.querySelector('.instagram-section-mp');
+        if (instagramSection) {
+            observer.observe(instagramSection);
+        }
+
+        // Service card hover effects
+        document.querySelectorAll('.service-card-mp').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.zIndex = '20';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.zIndex = '1';
+            });
+        });
+
+        // Add loading state to images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+            
+            if (!img.complete) {
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.3s ease';
+            }
+        });
+
+        // Logo animation on scroll
+        window.addEventListener('scroll', () => {
+            const logo = document.querySelector('.mp-logo');
+            if (logo && window.scrollY > 100) {
+                logo.style.transform = 'scale(0.95)';
+            } else if (logo) {
+                logo.style.transform = 'scale(1)';
+            }
+        });
+
+        // Instagram badge pulse effect
+        const instagramBadge = document.querySelector('.instagram-badge-mp');
+        if (instagramBadge) {
+            setInterval(() => {
+                instagramBadge.style.boxShadow = '0 4px 20px rgba(30, 64, 175, 0.4)';
+                setTimeout(() => {
+                    instagramBadge.style.boxShadow = '0 4px 15px rgba(30, 64, 175, 0.3)';
+                }, 500);
+            }, 3000);
+        }
+    </script>
 </body>
 </html>
