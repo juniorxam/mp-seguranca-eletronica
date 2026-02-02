@@ -3,128 +3,530 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP TECH | Segurança e Tecnologia</title>
+    <meta name="description" content="MP SERVIÇOS E TECNOLOGIA - Especialistas em segurança eletrônica em Palmas-TO. Instalação de câmeras CFTV, cercas elétricas, motores para portão e muito mais.">
+    <meta name="keywords" content="segurança eletrônica, câmeras CFTV, cerca elétrica, portão automático, Palmas, tecnologia">
+    <meta name="author" content="MP SERVIÇOS E TECNOLOGIA">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MP SERVIÇOS E TECNOLOGIA | Segurança e Tecnologia em Palmas">
+    <meta property="og:description" content="Proteção de elite para sua casa ou empresa. Especialistas em segurança eletrônica em Palmas e região.">
+    <meta property="og:image" content="./og-image.jpg">
+    <title>MP SERVIÇOS E TECNOLOGIA | Segurança Eletrônica em Palmas-TO</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
-        .service-card {
-            background: linear-gradient(145deg, #0f172a, #1e293b);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            transition: all 0.3s ease;
+        * { 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
         }
+        
+        body { 
+            background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+            color: #f8fafc;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Hero Section com gradiente mais forte */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.97) 0%, rgba(30, 41, 59, 0.97) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(59,130,246,0.08)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
+            background-attachment: fixed;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -100px;
+            animation: float 15s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+
+        /* Cards de serviço melhorados */
+        .service-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
         .service-card:hover {
             border-color: #3b82f6;
-            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.5);
-            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.5);
+            transform: translateY(-8px) scale(1.02);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
         }
-        .hero-mesh {
-            background-image: radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.3) 0, transparent 50%), 
-                              radial-gradient(at 100% 100%, rgba(30, 58, 138, 0.3) 0, transparent 50%);
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.05) 100%);
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.4s ease;
+            padding: 0.5rem;
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+
+        /* Ícones melhorados */
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(99, 102, 241, 0.15) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .icon-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.4) 0%, rgba(99, 102, 241, 0.25) 100%);
+            border-color: #3b82f6;
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+            transform: rotate(5deg);
+        }
+
+        /* Texto gradiente */
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
+
+        /* Botões melhorados */
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            font-weight: 700;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            border: 2px solid rgba(59, 130, 246, 0.6);
+            background: rgba(59, 130, 246, 0.08);
+            transition: all 0.3s ease;
+            font-weight: 700;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Header melhorado */
+        .header-blur {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Botão WhatsApp melhorado */
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25d366 0%, #20ba58 100%);
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .whatsapp-btn:hover {
+            box-shadow: 0 0 60px rgba(37, 211, 102, 0.8);
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        /* Seção de título */
+        .section-title {
+            font-size: 2.75rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        /* Badge de disponibilidade */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            color: #93c5fd;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .pulse-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #60a5fa;
+            border-radius: 50%;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            box-shadow: 0 0 10px #60a5fa;
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.7;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Links do footer */
+        .footer-link {
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .footer-link:hover {
+            color: #60a5fa !important;
+            transform: translateX(5px);
+            text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+        }
+
+        /* CTA Section melhorada */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Efeito de brilho sutil nos textos importantes */
+        .text-glow {
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Melhoria na legibilidade do texto */
+        .text-readable {
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        /* Espaçamento entre seções */
+        section {
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
-<body class="hero-mesh">
+<body>
 
-    <header class="fixed w-full z-50 px-4 py-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center bg-slate-900/80 backdrop-blur-xl p-4 rounded-3xl border border-white/10 shadow-2xl">
-            <div class="flex items-center gap-2">
-                <div class="bg-blue-600 p-2 rounded-xl">
-                    <i class="fas fa-shield-halved text-white"></i>
+    <!-- Header -->
+    <header class="fixed w-full z-50 px-4 py-3 md:py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center header-blur p-4 rounded-2xl md:rounded-3xl">
+            <div class="flex items-center gap-2 md:gap-3">
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-2 md:p-3 rounded-lg md:rounded-xl shadow-lg shadow-blue-500/40">
+                    <i class="fas fa-shield-halved text-white text-lg md:text-xl"></i>
                 </div>
-                <span class="text-xl font-extrabold tracking-tighter">MP<span class="text-blue-500">TECH</span></span>
+                <span class="text-lg md:text-2xl font-extrabold tracking-tighter text-white">
+                    MP <span class="gradient-text">SERVIÇOS E TECNOLOGIA</span>
+                </span>
             </div>
-            <a href="https://wa.me/5563992543227" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-xl font-bold text-sm transition shadow-lg shadow-blue-500/30">
-                Orçamento
+            <a href="https://wa.me/5563992543227" 
+               class="btn-primary text-white px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl font-bold text-xs md:text-sm shadow-lg"
+               aria-label="Solicitar orçamento pelo WhatsApp">
+                ORÇAMENTO GRÁTIS
             </a>
         </div>
     </header>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-xs font-bold mb-8">
-            <span class="relative flex h-2 w-2">
-                <span class="animate-ping absolute h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-            </span>
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 md:pt-20 relative z-10" id="inicio">
+        <div class="badge">
+            <span class="pulse-dot"></span>
             DISPONÍVEL EM PALMAS E REGIÃO
         </div>
-        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
-            Proteção de <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Elite</span> para você.
+        
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 md:mb-8 leading-tight text-glow">
+            Proteção de <br><span class="gradient-text">Elite</span> para você.
         </h1>
-        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-            Especialistas em segurança eletrônica de alta performance. De câmeras inteligentes a motores ultra-rápidos.
+        
+        <p class="text-readable text-lg md:text-xl lg:text-2xl max-w-3xl mb-8 md:mb-12 leading-relaxed">
+            Especialistas em segurança eletrônica de alta performance. De câmeras inteligentes a motores ultra-rápidos. 
+            <span class="font-semibold text-blue-300">Tecnologia que protege o que você ama.</span>
         </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-            <a href="https://wa.me/5563992543227" class="bg-white text-slate-900 px-10 py-4 rounded-2xl font-black text-lg hover:scale-105 transition">
-                FALAR COM TÉCNICO
+        
+        <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+            <a href="https://wa.me/5563992543227" 
+               class="btn-primary text-white px-8 md:px-10 py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-sm md:text-base shadow-lg"
+               aria-label="Falar com técnico especializado">
+                <i class="fab fa-whatsapp mr-2"></i> FALAR COM TÉCNICO
             </a>
-            <a href="#servicos" class="bg-slate-800 text-white px-10 py-4 rounded-2xl font-black text-lg border border-slate-700 hover:bg-slate-700 transition">
-                VER SERVIÇOS
+            <a href="#servicos" 
+               class="btn-secondary text-blue-300 px-8 md:px-10 py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-sm md:text-base"
+               aria-label="Ver nossos serviços">
+                <i class="fas fa-list mr-2"></i> VER SERVIÇOS
+            </a>
+        </div>
+
+        <!-- Seta indicando scroll -->
+        <div class="mt-16 animate-bounce">
+            <a href="#servicos" class="text-blue-400 hover:text-blue-300 transition-colors" aria-label="Role para baixo">
+                <i class="fas fa-chevron-down text-2xl"></i>
             </a>
         </div>
     </section>
 
-    <section id="servicos" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Services Section -->
+    <section id="servicos" class="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="text-readable text-lg md:text-xl max-w-3xl mx-auto">
+                Soluções completas em segurança e tecnologia para sua residência ou empresa em Palmas e região
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             
-            <div class="service-card p-8 rounded-[2rem]">
-                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="fas fa-video text-2xl"></i>
+            <!-- Câmeras CFTV -->
+            <div class="service-card p-6 md:p-8 rounded-2xl">
+                <img src="./cftv.jpg" alt="Instalação de câmeras CFTV Full HD em Palmas" class="service-image">
+                <div class="icon-box">
+                    <i class="fas fa-video text-2xl text-blue-400"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-3 text-white">Câmeras CFTV</h3>
-                <p class="text-slate-400 leading-relaxed">Instalação de câmeras Full HD com acesso remoto via celular de qualquer lugar do mundo.</p>
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Câmeras CFTV</h3>
+                <p class="text-readable text-sm md:text-base flex-grow">
+                    Instalação de câmeras Full HD com acesso remoto via celular de qualquer lugar do mundo. 
+                    Monitoramento 24/7 com qualidade profissional e armazenamento em nuvem.
+                </p>
             </div>
 
-            <div class="service-card p-8 rounded-[2rem]">
-                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="fas fa-bolt text-2xl"></i>
+            <!-- Cercas e Concertinas -->
+            <div class="service-card p-6 md:p-8 rounded-2xl">
+                <img src="./cerca.jpg" alt="Instalação de cerca elétrica e concertina em Palmas" class="service-image">
+                <div class="icon-box">
+                    <i class="fas fa-bolt text-2xl text-blue-400"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-3 text-white">Cercas e Concertinas</h3>
-                <p class="text-slate-400 leading-relaxed">Proteção perimetral máxima para sua residência ou empresa com materiais de alta durabilidade.</p>
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Cercas e Concertinas</h3>
+                <p class="text-readable text-sm md:text-base flex-grow">
+                    Proteção perimetral máxima para sua residência ou empresa com materiais de alta durabilidade 
+                    e resistência. Instalação profissional com garantia.
+                </p>
             </div>
 
-            <div class="service-card p-8 rounded-[2rem]">
-                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="fas fa-gate text-2xl"></i>
+            <!-- Motor para Portão -->
+            <div class="service-card p-6 md:p-8 rounded-2xl">
+                <img src="./motor.jpg" alt="Instalação de motor para portão automático em Palmas" class="service-image">
+                <div class="icon-box">
+                    <i class="fas fa-gate text-2xl text-blue-400"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-3 text-white">Motor para Portão</h3>
-                <p class="text-slate-400 leading-relaxed">Automação com motores ultra-rápidos e silenciosos. Segurança e praticidade no seu dia a dia.</p>
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Motor para Portão</h3>
+                <p class="text-readable text-sm md:text-base flex-grow">
+                    Automação com motores ultra-rápidos e silenciosos. Segurança e praticidade no seu dia a dia 
+                    com controle remoto e sensores de segurança.
+                </p>
             </div>
 
-            <div class="service-card p-8 rounded-[2rem]">
-                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="fas fa-fingerprint text-2xl"></i>
+            <!-- Fechaduras Digitais -->
+            <div class="service-card p-6 md:p-8 rounded-2xl">
+                <img src="./fechadura.jpg" alt="Instalação de fechaduras digitais biométricas em Palmas" class="service-image">
+                <div class="icon-box">
+                    <i class="fas fa-fingerprint text-2xl text-blue-400"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-3 text-white">Fechaduras Digitais</h3>
-                <p class="text-slate-400 leading-relaxed">Esqueça as chaves. Controle o acesso por biometria, senha ou cartão magnético.</p>
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Fechaduras Digitais</h3>
+                <p class="text-readable text-sm md:text-base flex-grow">
+                    Esqueça as chaves. Controle o acesso por biometria, senha ou cartão magnético com tecnologia 
+                    de ponta. Instalação rápida e segura.
+                </p>
             </div>
 
-            <div class="service-card p-8 rounded-[2rem]">
-                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="fas fa-phone-volume text-2xl"></i>
+            <!-- Interfonia -->
+            <div class="service-card p-6 md:p-8 rounded-2xl">
+                <img src="./interfonia.jpg" alt="Sistema de interfonia com vídeo em Palmas" class="service-image">
+                <div class="icon-box">
+                    <i class="fas fa-phone-volume text-2xl text-blue-400"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-3 text-white">Interfonia</h3>
-                <p class="text-slate-400 leading-relaxed">Sistemas de comunicação residencial e predial com áudio e vídeo de alta clareza.</p>
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Interfonia</h3>
+                <p class="text-readable text-sm md:text-base flex-grow">
+                    Sistemas de comunicação residencial e predial com áudio e vídeo de alta clareza e confiabilidade. 
+                    Ideal para condomínios e empresas.
+                </p>
             </div>
 
-            <div class="service-card p-8 rounded-[2rem]">
-                <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="fas fa-network-wired text-2xl"></i>
+            <!-- Pontos de Rede -->
+            <div class="service-card p-6 md:p-8 rounded-2xl">
+                <img src="./rede.jpg" alt="Cabeamento estruturado e pontos de rede em Palmas" class="service-image">
+                <div class="icon-box">
+                    <i class="fas fa-network-wired text-2xl text-blue-400"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-3 text-white">Pontos de Rede</h3>
-                <p class="text-slate-400 leading-relaxed">Cabeamento estruturado para internet estável e Wi-Fi de alta cobertura em todo o local.</p>
+                <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Pontos de Rede</h3>
+                <p class="text-readable text-sm md:text-base flex-grow">
+                    Cabeamento estruturado para internet estável e Wi-Fi de alta cobertura em todo o local. 
+                    Soluções para home office e empresas.
+                </p>
             </div>
 
         </div>
     </section>
 
-    <a href="https://wa.me/5563992543227" class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(34,197,94,0.5)] hover:scale-110 active:scale-95 transition-all animate-bounce z-50">
-        <i class="fab fa-whatsapp text-3xl"></i>
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto relative z-10">
+        <div class="cta-section rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+            <!-- Elementos decorativos -->
+            <div class="absolute top-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-40 h-40 bg-indigo-500/10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+            
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white relative z-10">
+                Pronto para proteger o que você ama?
+            </h2>
+            <p class="text-readable text-lg md:text-xl mb-8 max-w-2xl mx-auto relative z-10">
+                Entre em contato agora e receba um <span class="font-bold text-blue-300">orçamento personalizado gratuito</span> 
+                para sua necessidade. Atendemos em Palmas e toda região.
+            </p>
+            <a href="https://wa.me/5563992543227" 
+               class="btn-primary text-white px-8 md:px-12 py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg shadow-lg inline-block relative z-10"
+               aria-label="Solicitar orçamento gratuito pelo WhatsApp">
+                <i class="fab fa-whatsapp mr-2"></i> SOLICITAR ORÇAMENTO GRÁTIS
+            </a>
+            
+            <!-- Info adicional -->
+            <p class="mt-6 text-blue-300 text-sm md:text-base relative z-10">
+                <i class="fas fa-clock mr-1"></i> Atendimento: Segunda a Sábado, 8h às 18h
+            </p>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5563992543227" 
+       class="whatsapp-btn fixed bottom-6 md:bottom-8 right-6 md:right-8 text-white w-14 md:w-16 h-14 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50"
+       aria-label="Chamar no WhatsApp">
+        <i class="fab fa-whatsapp text-2xl md:text-3xl"></i>
     </a>
 
-    <footer class="py-12 text-center border-t border-white/5">
-        <p class="text-slate-500 text-sm">© 2026 MP SERVIÇOS E TECNOLOGIA | (63) 99254-3227</p>
+    <!-- Footer -->
+    <footer class="py-8 md:py-12 text-center border-t border-white/10 px-4 relative z-10 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+            <!-- Logo no footer -->
+            <div class="mb-6">
+                <div class="flex items-center justify-center gap-2 md:gap-3">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-2 md:p-3 rounded-lg md:rounded-xl">
+                        <i class="fas fa-shield-halved text-white text-lg md:text-xl"></i>
+                    </div>
+                    <span class="text-xl md:text-3xl font-extrabold tracking-tighter text-white">
+                        MP <span class="gradient-text">SERVIÇOS E TECNOLOGIA</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Contatos -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-6">
+                <a href="https://wa.me/5563992543227" 
+                   class="footer-link text-slate-300 hover:text-blue-400 text-base md:text-lg font-medium">
+                    <i class="fab fa-whatsapp mr-2"></i>(63) 99254-3227
+                </a>
+                <span class="text-slate-600 hidden md:inline">•</span>
+                <span class="text-slate-300 text-base md:text-lg">
+                    <i class="fas fa-map-marker-alt mr-2"></i>Palmas - TO e Região
+                </span>
+            </div>
+
+            <!-- Direitos autorais -->
+            <p class="text-slate-400 text-sm md:text-base mb-4">
+                Especialistas em Segurança Eletrônica e Automação Residencial
+            </p>
+            <p class="text-slate-500 text-xs md:text-sm">
+                © 2026 MP SERVIÇOS E TECNOLOGIA | Todos os direitos reservados
+            </p>
+            
+            <!-- Segurança adicional -->
+            <p class="mt-4 text-slate-600 text-xs">
+                <i class="fas fa-lock mr-1"></i> Sua segurança é nossa prioridade
+            </p>
+        </div>
     </footer>
 
 </body>
